@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+	touch-action: pan-y;
+	background-color: #081b29;
+    color: white;
+}
+
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+	z-index: 999;
+}
+
+.logo{
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
+.navbar{
+    padding-top: 10px;
+}
+
+.menu-toggle,
+.overlay,
+.close-icon{
+    display: none;
+}
+
+.navbar a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+    margin-left: 40px;
+    transition: .3s;
+}
+
+.navbar a.normal-buttons:hover,
+.navbar a.active{
+    color: rgb(14, 148, 226);
+    transform: translateY(10px);
+}
+
+.menu-buttons{
+	color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 15px 40px 15px 40px;
+}
+
+#container {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: grid;
+	grid-template-rows: 60% 40%;
+}
+
+#maze {
+	position: absolute;
+	width: 340px;
+	height: 240px;
+	top: 30vh;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.mbox,
+.controls {
+	height: 80%;
+	display: grid;
+}
+
+.buttons {
+	width: 210px;
+	height: 140px;
+	background: #222;
+	align-self: center;
+	justify-self: center;
+	display: grid;
+	grid-template-rows: 70px 70px;
+	grid-template-columns: 70px 70px 70px;
+}
+
+.btn {
+	width: 60px;
+	height: 60px;
+	border: 2px #fff solid;
+	border-bottom: 2px #fff solid;
+	align-self: center;
+	justify-self: center;
+	cursor: pointer;
+	border-radius: 8px;
+	display: grid;
+	/*box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.2);*/
+}
+.chevron {
+	height: 20px;
+	width: 20px;
+	align-self: center;
+	justify-self: center;
+	color: #222;
+	font-size: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+}
+
+#bu {
+	grid-column-start: 2;
+}
+#bd {
+	grid-column-start: 2;
+	grid-row-start: 2;
+}
+#bl {
+	grid-column-start: 1;
+	grid-row-start: 2;
+}
+#br {
+	grid-column-start: 3;
+	grid-row-start: 2;
+}
+
+#thingie,
+#home {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	/*background: #39a;
+	transition: all .1s;*/
+}
+
+.emo {
+	position: absolute;
+	top: 4px;
+	left: 1px;
+	width: 13px;
+	height: 13px;
+	border-radius: 20px;
+	font-size: 15px;
+	line-height: 15px;
+	text-align: left;
+}
+
+.barrier {
+	position: absolute;
+	background: #fff;
+}
+
+#top {
+	top: 20px;
+	left: 20px;
+	width: 300px;
+	height: 2px;
+}
+
+#bottom {
+	top: 220px;
+	left: 20px;
+	width: 302px;
+	height: 2px;
+}
+
+/*style reset*/
+button {
+	display: inline-block;
+	border: none;
+	padding: none;
+	margin: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+button:hover,
+button:focus {
+	-webkit-appearance: none;
+}
+
+button:focus {
+	outline: none;
+}
+
+button:active {
+	transform: scale(1);
+	-webkit-appearance: none;
+}
+
+
+/* Media query for small screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    /* Reset header padding for mobile view */
+    .header {
+        padding: 10px 5%;
+    }
+
+    /* Hide the navbar by default on mobile screens */
+    .navbar {
+        display: none;
+    }
+
+    /* Show the menu toggle icon */
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white; /* Make it visible on the dark background */
+    }
+
+    /* Styling for the overlay */
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(8, 27, 41, 0.9); /* Slightly transparent dark background */
+        z-index: 2;
+    }
+
+    /* Styling for the close icon in the overlay */
+    #close-icon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 3;
+        color: white; /* Make it visible on the dark background */
+    }
+
+    /* Styles for the navigation menu within the overlay */
+    .overlay .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        background: #081b29;
+        padding: 10px;
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}

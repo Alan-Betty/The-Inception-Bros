@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #081b29;
+    color: white;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
+.navbar{
+    padding-top: 10px;
+}
+
+.menu-toggle,
+.overlay,
+.close-icon{
+    display: none;
+}
+
+.navbar a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+    margin-left: 40px;
+    transition: .3s;
+}
+
+.navbar a.normal-buttons:hover,
+.navbar a.active{
+    color: rgb(14, 148, 226);
+    transform: translateY(10px);
+}
+
+.menu-buttons{
+	color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 15px 40px 15px 40px;
+}
+
+.cont {
+    display: grid;
+    width: 600px;
+    grid-template-columns: repeat(10, 1fr);
+    margin: 0px 0 0px 0;
+}
+
+.cont div {
+    width: 60px;
+    height: 60px;
+    border: 0.2px solid black;
+}
+
+#p1,
+#p2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: rgb(236, 82, 82);
+    position: relative;
+    border: 3px solid black;
+}
+
+#p1 {
+    position: relative;
+    top: 0px;
+    transition: all linear 0.5s;
+    left: -62px;
+    z-index: 2;
+}
+
+#p2 {
+    z-index: 2;
+    position: relative;
+    top: -55px;
+    left: -62px;
+    transition: all linear 0.5s;
+    background-color: rgb(243, 181, 46);
+}
+
+img {
+    position: relative;
+    top: -615px;
+    left: 8px;
+    margin: 0;
+    width: 615px;
+    height: 615px;
+}
+
+#diceCont {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 200px;
+    left: 120px;
+    font-size: 2rem;
+    z-index: 99;
+}
+#diceBtn {
+    z-index: 99;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(75, 140, 197);
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* Media query for small screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    /* Reset header padding for mobile view */
+    .header {
+        padding: 10px 5%;
+    }
+
+    /* Hide the navbar by default on mobile screens */
+    .navbar {
+        display: none;
+    }
+
+    /* Show the menu toggle icon */
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white; /* Make it visible on the dark background */
+    }
+
+    /* Styling for the overlay */
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(8, 27, 41, 0.9); /* Slightly transparent dark background */
+        z-index: 220;
+    }
+
+    /* Styling for the close icon in the overlay */
+    #close-icon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 223;
+        color: white; /* Make it visible on the dark background */
+    }
+
+    /* Styles for the navigation menu within the overlay */
+    .overlay .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        background: #081b29;
+        padding: 10px;
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 224;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+
+    /* Responsive styles for #diceCont */
+    #diceCont {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 50%; /* Center vertically in the viewport */
+        left: 50%; /* Center horizontally in the viewport */
+        transform: translate(-50%, -50%); /* Center the element */
+        font-size: 2rem;
+        z-index: 99;
+    }
+}
+
+@media (max-width: 1250px) {    
+    #diceCont {
+        display: flex;
+        place-items: none;
+        top: 92vh;
+        left: 36vw;
+        border: 2px solid red;
+    }
+    #diceBtn {
+        width: 200px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 1250px) { 
+    #diceCont {
+        display: flex;
+        place-items: none;
+        top: 99vh;
+        left: 10vw;
+    }
+    #diceBtn {
+        width: 200px;
+        margin-left: 20px;
+    }
+}

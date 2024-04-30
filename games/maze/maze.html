@@ -1,0 +1,84 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game</title>
+        <link rel="stylesheet" href="maze.css">
+    </head>
+    <body>
+        
+        <!--Navbar-->
+        <header class="header">
+            <a href="../../website.html" class="logo">Inception Bros.</a>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <div class="overlay" id="overlay">
+                <div class="nav">
+                    <a href="../../website.html" class="menu-buttons">Home</a>
+                    <a href="../../contactus.html" class="menu-buttons">Contact</a>
+                    <a href="../../tools.html" class="menu-buttons">Tools</a>
+                    <a href="../../games1.html" class="menu-buttons">Games</a>
+                </div>
+            </div>
+            <div class="close-icon" id="close-icon">&times;</div>
+            <nav class="navbar" id="navbar">
+                <a href="../../website.html" class="normal-buttons">Home</a>
+                <a href="../../contactus.html" class="normal-buttons">Contact</a>
+                <a href="../../tools.html" class="normal-buttons">Tools</a>
+                <a href="../../games1.html" class="active">Games</a>
+            </nav>
+        </header>
+        
+        <!-- Maze -->
+        <div id="container">
+            <div class="mbox">
+            <div id="maze">
+                <div id="thingie">
+                    <div class="emo" id="emo">🥺</div>
+                </div>
+                <div id="home">
+                    <div class="emo">🏠</div>
+                </div>
+                <div class="barrier" id="top"></div>
+                <div class="barrier" id="bottom"></div>
+            </div>
+                </div>
+            <div class="controls">
+                <div class="buttons">
+                    <button class="btn" id="bu"><div class="chevron">↑</div></button>
+                    <button class="btn" id="bd"><div class="chevron">↓</div></button>
+                    <button class="btn" id="bl"><div class="chevron">←</div></button>
+                    <button class="btn" id="br"><div class="chevron">→</div></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script -->
+        <script>
+            const menuButton = document.querySelector('#menu-toggle'); // Updated to match the correct ID
+            const closeIcon = document.querySelector('#close-icon'); // Updated to match the correct ID
+            const navbar = document.querySelector('#navbar');
+            const overlay = document.querySelector('#overlay');
+            
+            menuButton.addEventListener('click', () => {
+                navbar.classList.add('show-menu');
+                overlay.style.display = 'block';
+                closeIcon.style.display = 'block';
+            });
+            
+            closeIcon.addEventListener('click', () => {
+                navbar.classList.remove('show-menu');
+                overlay.style.display = 'none';
+                closeIcon.style.display = 'none';
+            });
+            
+            overlay.addEventListener('click', () => { 
+                navbar.classList.remove('show-menu');
+                overlay.style.display = 'none';
+                closeIcon.style.display = 'none';
+            });
+        </script>
+        <script src="maze.js"></script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+body{
+    background-color: rgb(19, 17, 17);
+}
+
+.center{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.heading{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+.js-move{
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.js-result{
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.js-score{
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.move-icon{
+    height: 100px;
+    width: 100px;
+}
+
+.button-class{
+    background-color: transparent;
+    border: white solid 3px;
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    margin-right: 20px;
+    
+}
+
+.reset-button{
+    background-color: white;
+    color: black;
+    padding: 15px 25px 15px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.reset-button:hover{
+    opacity: 0.8;
+}
+
+.button-class:hover{
+    opacity: 0.8;
+}
