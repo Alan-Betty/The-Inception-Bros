@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="entire">
+    <p class="result"></p>
+    <p>
+        <button onclick="
+            updateCalculator('1');
+            ShowOnScreen();
+        " class="number-button">1</button>
+        <button onclick="
+            updateCalculator('2');
+            ShowOnScreen();
+        " class="number-button">2</button>
+        <button onclick="
+            updateCalculator('3');
+            ShowOnScreen();
+        " class="number-button">3</button>
+        <button onclick="
+            updateCalculator('+');
+            ShowOnScreen();
+        " class="sign-button">+</button>
+    </p>
+    <p>
+        <button onclick="
+            updateCalculator('4');
+            ShowOnScreen();
+        " class="number-button">4</button>
+        <button onclick="
+            updateCalculator('5');
+            ShowOnScreen();
+        " class="number-button">5</button>
+        <button onclick="
+            updateCalculator('6');
+            ShowOnScreen();
+        " class="number-button">6</button>
+        <button onclick="
+            updateCalculator('-');
+            ShowOnScreen();
+        " class="sign-button">-</button>
+    </p>
+    <p>
+        <button onclick="
+            updateCalculator('7');
+            ShowOnScreen();
+        " class="number-button">7</button>
+        <button onclick="
+            updateCalculator('8');
+            ShowOnScreen();
+        " class="number-button">8</button>
+        <button onclick="
+            updateCalculator('9');
+            ShowOnScreen();
+        " class="number-button">9</button>
+        <button onclick="
+            updateCalculator('*');
+            ShowOnScreen();
+        " class="sign-button">*</button>
+    </p>
+    <p>
+        <button onclick="
+            calculation = '';
+            ShowOnScreen();
+        " class="number-button">Clear</button>
+        <button onclick="
+            updateCalculator('0');
+            ShowOnScreen();
+        " class="number-button">0</button>
+        <button onclick="
+            updateCalculator('/');
+            ShowOnScreen();
+        " class="number-button">/</button>
+        <button onclick="
+            calculation = eval(calculation);
+            ShowOnScreen();
+        " class="sign-button">=</button>
+    </p>
+    </div>
+    <script src="calculator.js">   
+    </script>
+</body>
+</html>

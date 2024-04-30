@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>login</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="login.css">
+		<link rel="icon" href="games/Images/robot.png">
+	</head>
+	<body>
+		
+		<header class="header">
+			<a href="starter.html" class="logo">Inception Bros.</a>
+			<div class="menu-toggle" id="menu-toggle">&#9776;</div>
+			<div class="overlay" id="overlay">
+				<div class="nav">
+					<a href="starter.html" class="menu-buttons">Home</a>
+					<a href="#" class="menu-buttons" onclick="alert('Login to access.')">Contact</a>
+					<a href="login.html" class="menu-buttons">Login</a>
+				</div>
+			</div>
+			<div class="close-icon" id="close-icon">&times;</div>
+			<nav class="navbar" id="navbar">
+				<a href="starter.html" class="normal-buttons">Home</a>
+				<a href="#" class="normal-buttons" id="inactive">Contact</a>
+				<a href="login.html" class="active">Login</a>
+			</nav>
+		</header>
+
+		<div class="login_form_container">
+			<div class="login_form">
+				<h2>Login</h2>			
+				<div class="input_group">
+					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><style>svg{fill:#0e94e2}</style><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+					<input type="email" placeholder="Email" id="email" autocomplete="off" required="required">
+				</div>
+				<div class="input_group">
+					<i class="fa fa-unlock-alt"></i>
+					<input type="password" placeholder="Password" id="password" autocomplete="off" required="required">
+				</div>
+				<div class="button_group" id="login_button">
+					<a onclick="login();">Submit</a>
+				</div>
+				<div class="fotter">
+					<a href="register.html" class="extra" id="sign" onclick="alert('redirecting ...')">Sign Up</a>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+		
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		         https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="login.js"></script>
+	</body>
+</html>
