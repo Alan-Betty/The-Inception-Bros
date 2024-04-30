@@ -1,0 +1,46 @@
+body{
+    background-color: #000;
+}
+
+.entire{
+    margin-top: 100px;
+    margin-left: 500px;
+}
+
+.number-button{
+    height: 80px;
+    width: 80px;
+    border-radius: 60px;
+    border: none;
+    color: white;
+    background-color: rgb(49, 44, 44);
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sign-button{
+    height: 80px;
+    width: 80px;
+    border-radius: 60px;
+    border: none;
+    color: white;
+    background-color: rgb(255, 174, 0);
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.result{
+    color: white;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.sign-button:hover{
+    background-color: rgb(255, 190, 51);
+}
+
+.number-button:hover{
+    background-color: rgb(66, 59, 59);
+}
