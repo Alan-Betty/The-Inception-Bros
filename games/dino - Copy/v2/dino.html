@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <title>Chrome Dinosaur Game</title>
+        <link rel="stylesheet" href="dino.css">
+        <link rel="icon" href="games/Images/robot.png">
+       
+    </head>
+    <body>
+        
+        <!--Navbar-->
+        <header class="header">
+            <a href="../../../website.html" class="logo">Inception Bros.</a>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <div class="overlay" id="overlay">
+                <div class="nav">
+                    <a href="../../../website.html" class="normal-buttons">Home</a>
+                    <a href="../../../contactus.html" class="normal-buttons">Contact</a>
+                    <a href="../../../tools.html" class="normal-buttons">Tools</a>
+                    <a href="../../../games1.html" class="active">Games</a>
+                </div>
+            </div>
+            <div class="close-icon" id="close-icon">&times;</div>
+            <nav class="navbar" id="navbar">
+                <a href="../../../website.html" class="normal-buttons">Home</a>
+                <a href="../../../contactus.html" class="normal-buttons">Contact</a>
+                <a href="../../../tools.html" class="normal-buttons">Tools</a>
+                <a href="../../../games1.html" class="active">Games</a>
+            </nav>
+        </header>
+
+        <!--Dinosar Game-->
+        <h1 style="text-align:center">Chrome Dinosaur Game</h1>
+        <canvas id="board"></canvas>
+
+        <!-- Script -->
+        <script>
+            const menuButton = document.querySelector('#menu-toggle'); // Updated to match the correct ID
+            const closeIcon = document.querySelector('#close-icon'); // Updated to match the correct ID
+            const navbar = document.querySelector('#navbar');
+            const overlay = document.querySelector('#overlay');
+            
+            menuButton.addEventListener('click', () => {
+                navbar.classList.add('show-menu');
+                overlay.style.display = 'block';
+                closeIcon.style.display = 'block';
+            });
+            
+            closeIcon.addEventListener('click', () => {
+                navbar.classList.remove('show-menu');
+                overlay.style.display = 'none';
+                closeIcon.style.display = 'none';
+            });
+            
+            overlay.addEventListener('click', () => { 
+                navbar.classList.remove('show-menu');
+                overlay.style.display = 'none';
+                closeIcon.style.display = 'none';
+            });
+        </script>
+        <script src="dino.js"></script>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: #081b29;
+    color: white;
+}
+
+#board {
+    background-color: lightgray;
+    border-bottom: 1px solid black;
+}
+
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
+.navbar{
+    padding-top: 10px;
+}
+
+.menu-toggle,
+.overlay,
+.close-icon{
+    display: none;
+}
+
+.navbar a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+    margin-left: 40px;
+    transition: .3s;
+}
+
+.navbar a.normal-buttons:hover,
+.navbar a.active{
+    color: rgb(14, 148, 226);
+    transform: translateY(10px);
+}
+
+.login{
+    height: 20px;
+    width: 70px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #0e94e2;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Media query for small screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    /* Reset header padding for mobile view */
+    .header {
+        padding: 10px 5%;
+    }
+
+    /* Hide the navbar by default on mobile screens */
+    .navbar {
+        display: none;
+    }
+
+    /* Show the menu toggle icon */
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white; /* Make it visible on the dark background */
+    }
+
+    /* Styling for the overlay */
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(8, 27, 41, 0.9); /* Slightly transparent dark background */
+        z-index: 2;
+    }
+
+    /* Styling for the close icon in the overlay */
+    #close-icon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 3;
+        color: white; /* Make it visible on the dark background */
+    }
+
+    /* Styles for the navigation menu within the overlay */
+    .overlay .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        background: #081b29;
+        padding: 10px;
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    #board {
+        padding: 10px;
+    }
+}
