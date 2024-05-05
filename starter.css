@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+:root{
+    --main-color: #0e94e2;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #081b29;
+    --main-color: #0e94e2;
+    --secondary-color: #ffffff;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+body.light{
+    --primary-color: #ffffff;
+    --secondary-color: #0f0e0e;
+}
+
+.theme {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.fas {
+    color: var(--secondary-color);
+    padding-top: 9px;
+    font-size: xx-large;
+}
+
+#icon {
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
+.navbar{
+    padding-top: 10px;
+    padding-left: 400px;
+}
+
+.menu-toggle,
+.overlay,
+.close-icon{
+    display: none;
+}
+
+.navbar a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+    margin-left: 40px;
+    transition: .3s;
+}
+
+#inactive{
+    color: #6e6868;
+}
+
+.navbar a.normal-buttons:hover,
+.navbar a.active{
+    color: rgb(14, 148, 226);
+    transform: translateY(10px);
+}
+
+.login{
+    height: 20px;
+    width: 70px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #0e94e2;
+    z-index: 1;
+    overflow: hidden;
+}
+
+a.login::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #0e94e2;
+    border-radius: 10px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+a.login:hover::before{
+    transform: scaleX(1);
+}
+
+
+
+.home{
+    display: flex;
+    align-items: center;
+    padding: 10%;
+    height: 100vh;
+}
+
+.main-heading{
+    font-size: 50px;
+    font-weight: 600;
+    max-width: 800px;
+    margin-bottom: 10px;
+}
+
+.typing{
+    font-size: 30px;
+    font-weight: 700;
+    -webkit-text-stroke: .7px white;
+    color: transparent;
+    background-image: linear-gradient(white,white);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-position: -42rem 0;
+    animation: typing 4s linear infinite ;
+}
+
+/*KEYFRAMES*/
+@keyframes typing{
+    0%,
+    10%,
+    100%{
+        background-position: -42rem 0;
+    }
+
+    65%,
+    78%,
+    85%{
+       background-position: 0 0;
+    }
+}
+
+.typing:before{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.home-content p{
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0 30px;
+}
+
+.bold{
+    color: rgb(14, 148, 226);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-box{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 350px;
+    
+}
+
+.btn-box a {
+    height: 100%;
+    width: 150px;
+    background: #6e6868;
+    border: 2px solid rgb(110, 104, 104);
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(34, 31, 31);
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-flex;
+    letter-spacing: 1px;
+    padding-left: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+    
+
+.menu-buttons{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 15px 40px 15px 40px;
+}
+
+.menu-button-active{
+    color: #0e94e2;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 15px 40px 15px 40px;
+}
+
+/* Media query for small screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    /* Reset header padding for mobile view */
+    .header {
+        padding: 10px 5%;
+    }
+
+    /* Hide the navbar by default on mobile screens */
+    .navbar {
+        display: none;
+    }
+
+    /* Show the menu toggle icon */
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white; /* Make it visible on the dark background */
+    }
+
+    /* Styling for the overlay */
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(8, 27, 41, 0.9); /* Slightly transparent dark background */
+        z-index: 2;
+    }
+
+    /* Styling for the close icon in the overlay */
+    #close-icon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 3;
+        color: white; /* Make it visible on the dark background */
+    }
+
+    /* Styles for the navigation menu within the overlay */
+    .overlay .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        background-color:#1c3c53;
+        padding: 10px;
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* Reset font sizes and styles for mobile view */
+    .main-heading {
+        font-size: 40px;
+    }
+
+    .typing {
+        font-size: 20px;
+        max-width: 250px; /* Adjust the maximum width for better responsiveness */
+    }
+
+    .home-content p {
+        font-size: 15px;
+        margin: 15px 0; /* Reduce the margin for better spacing */
+    }
+
+    .btn-box {
+        width: 100%; /* Expand the button box to the full width of the screen */
+    }
+
+    .btn-box a {
+        width: 45%; /* Make the buttons take up less space */
+        margin: 5px; /* Add some margin for spacing between buttons */
+    }
+
+    /* Additional styling for login button */
+    .login {
+        height: 30px;
+        width: 100px;
+        padding: 10px 20px;
+    }
+
+    a.login::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 15px; /* Adjust border radius */
+    }
+}
+
+/* Media query for medium-sized screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .home-content{
+        max-width: 650px;
+    }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1025px) {
+    .home-content{
+        max-width: 650px;
+    }
+}

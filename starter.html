@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inception Bros</title>
+        <link rel="stylesheet" href="starter.css">
+        <link rel="icon" href="games/Images/robot.png">
+
+        <link rel="stylesheet" href="/css/app-wa-462d1fe84b879d730fe2180b0e0354e0.css?vsn=d">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
+
+    </head>
+
+    <body>
+        
+        <header class="header">
+            <a href="starter.html" class="logo">Inception Bros.</a>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <div class="overlay" id="overlay">
+                <div class="nav">
+                    <a href="starter.html" class="menu-button-active">Home</a>
+                    <a href="#" class="menu-buttons" onclick="alert('Log In To access!')">Contact</a>
+                    <a href="login.html" class="menu-buttons">Login</a>
+                </div>
+            </div>
+            <div class="close-icon" id="close-icon">&times;</div>
+            <nav class="navbar" id="navbar">
+                <a href="starter.html" class="active">Home</a>
+                <a href="#" class="normal-buttons" id="inactive" onclick="
+                    alert('Login to access')
+                ">Contact</a>
+                <a href="login.html" class="login">Login</a>
+            </nav>
+            <button class="theme" onclick="alert('Log In To access!')" onclick="LightMode()"><i class="fas fa-sun" id="icon"></i></button>
+        </header>
+
+        <section class="home">
+            <div class="home-content">
+                <h1 class="main-heading" >Welcome to Inception.</h1>
+                <h3 class="typing">Done by Abel & Alan</h3>
+                <p>
+                    This is created by two really good idiots who wanted
+                    to make a website which create fun.
+                    Here in this website, you can access information,
+                    tools, and games. With this, we invite you to <br><span class="bold">INCEPTION BROS.</span></br>
+
+                </p>
+
+                <div class="btn-box">
+                    <a href="starter.html" onclick="alert('Log In To access!')">Tools</a>
+                    <a href="starter.html" onclick="alert('Log In To access!')">Games</a>
+                </div>
+            </div>
+        </section>
+
+        <script src="index.js"></script>
+
+    </body>
+</html>

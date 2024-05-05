@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="icon" href="games/Images/robot.png">
+
+    <link rel="stylesheet" href="/css/app-wa-462d1fe84b879d730fe2180b0e0354e0.css?vsn=d">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
+
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <header class="header">
+        <a href="index.html" class="logo">Inception Bros.</a>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <div class="overlay" id="overlay">
+            <div class="nav">
+                <a href="index.html">Home</a>
+                <a href="contactus.html">Contact</a>
+            </div>
+        </div>
+        <div class="close-icon" id="close-icon">&times;</div>
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="normal-buttons">Home</a>
+            <a href="contactus.html" class="active">Contact</a>
+            <a href="login.html" class="login">Login</a>
+        </nav>
+        <button class="theme" onclick="LightMode()"><i class="fas fa-sun" id="icon"></i></button>
+    </header>
+
+    <!--Contact Us-->
+    <div class="wrapper">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/meqbrnyj" method="post" name="Contact" id="myform"
+            onsubmit="return validate();">
+            <div class="input_field">
+                <input type="text" placeholder="Name" name="Name" id="name" required="required">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Phone" name="Mobile no" id="phone" required="required">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Email" name="E mail" id="email" required="required">
+            </div>
+            <div class="input_field">
+                <textarea placeholder="Message" name="Message" id="message" required="required"></textarea>
+            </div>
+            <div class="btn">
+                <input type="submit">
+            </div>
+            <div id="error_message"></div>
+        </form>
+    </div>
+
+    <script src="contactus.js"></script>
+    <script src="theme.js"></script>
+
+</body>
+
+</html>

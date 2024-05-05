@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #081b29;
+    --main-color: #0e94e2;
+    --secondary-color: #ffffff;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+body.light {
+    --primary-color: #ffffff;
+    --secondary-color: #0f0e0e;
+}
+
+.theme {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.fas {
+    color: var(--secondary-color);
+    padding-top: 7px;
+    font-size: xx-large;
+}
+
+#icon {
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.navbar{
+    padding-top: 10px;
+    padding-left: 400px;
+}
+
+.menu-toggle,
+.overlay,
+.close-icon{
+    display: none;
+}
+
+.navbar a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin-left: 40px;
+    transition: .3s;
+}
+
+.navbar a.normal-buttons:hover,
+.navbar a.active{
+    color: var(--main-color);
+    transform: translateY(10px);
+}
+
+/* Updated CSS for centering the boxes and hover effect */
+.boxgrp {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-content: center; /* Center vertically */
+    margin: 50px;
+}
+
+.box {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f0f0f0;
+    width: 200px;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+}
+
+.box img {
+    max-width: 80%;
+    height: auto;
+}
+
+.box p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: black;
+}
+
+.box .btn {
+    text-decoration: none;
+    background-color: #007bff;
+    color: var(--secondary-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.box:hover {
+    outline-offset: 0px;
+    outline: 2px solid black;
+    background-color: #fff;
+}
+
+.menu-button{
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 25px;
+    margin: 15px 40px 15px 40px;
+}
+
+.menu-button-active{
+    color: #007bff;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 15px 40px 15px 40px;
+}
+
+/* Media query for small screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    .navbar {
+        display: none; /* Hide the navbar */
+    }
+
+    #menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 2;
+    }
+
+    #close-icon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .overlay .nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        background: #1c3c53;
+        padding: 10px;
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+    }
+
+    .nav{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .show-menu #overlay {
+        display: block;
+    }
+
+    .boxgrp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box {
+        width: 100%;
+        margin: 10px;
+    }
+}
+
+/* Media query for medium-sized screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .boxgrp {
+        flex-wrap: wrap; /* Allow boxes to wrap to the next row */
+        justify-content: space-between; /* Space between boxes */
+    }
+
+    .box {
+        width: calc(50% - 20px); /* Two boxes per row with spacing */
+        margin: 10px 0; /* Add vertical spacing between rows */
+    }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1025px) {
+    .boxgrp {
+        flex-wrap: wrap; /* Allow boxes to wrap to the next row */
+        justify-content: space-between; /* Space between boxes */
+    }
+
+    .box {
+        width: calc(20% - 20px); /* Three boxes per row with spacing */
+        margin: 10px 0; /* Add vertical spacing between rows */
+    }
+}
